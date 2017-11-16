@@ -1,0 +1,8 @@
+#!/bin/zsh
+
+# Change Terminal Window Title
+if [ "$#" -eq 0 ];then
+  echo "usage chtwt 'titlename' "
+else
+  print -Pn "\e]0;$1\a"
+fi
