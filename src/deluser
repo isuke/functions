@@ -1,0 +1,23 @@
+#!/bin/zsh
+
+TARGETUSER=$1
+
+while true; do
+  read Answer\?"Are you sure you want to delete '$TARGETUSER' ? [y/n]"
+  case $Answer in
+    '' | [Yy]* )
+      break;
+      ;;
+    [Nn]* )
+      exit 1;
+      ;;
+    * )
+      echo Please answer YES or NO.
+      ;;
+  esac
+done
+
+sudo dscl . -delete /Users/$TARGETUSER
+sudo rm -rf /Users/$TARGETUSER
+
+echo 'done'
