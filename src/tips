@@ -1,0 +1,23 @@
+#!/bin/zsh
+
+tips=(
+  "!!         exec prev command"
+  "!+foo      exec prev \`foo\` command"
+  "!^         prev command's first arg"
+  "!n         prev command's nth arg"
+  "!*         prev command's all args"
+  "!$:r       removed arg's ext"
+  "!$:e       arg's ext"
+  "!$:h       directories of arg's path"
+  "!$:t       file name of arg's path"
+  "!?         exit code"
+  "cd -       move to prev directory"
+)
+
+if [[ $1 == "-r" || $1 == "--rand" ]]; then
+  echo $tips[$(($RANDOM % ${#tips[@]} + 1))]
+else
+  for tip in $tips; do
+    echo $tip
+  done
+fi
