@@ -3,5 +3,5 @@
 ## usage
 
 ```sh
-zsh functions.zsh
+source functions.zsh
 ```
