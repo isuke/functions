@@ -14,6 +14,10 @@ tips=(
   "cd -         move to prev directory"
   "> /dev/null  suppress standard output"
   "?> /dev/null suppress error output"
+  "⌃ a          jump to start of line"
+  "⌃ e          jump to end of line"
+  "⌃ u          remove from current to start"
+  "⌃ k          remove from current to end"
 )
 
 if [[ $1 == "-r" || $1 == "--rand" ]]; then
