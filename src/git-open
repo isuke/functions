@@ -1,4 +1,7 @@
 #!/bin/zsh
 
+#
+# Open GitHub Page
+#
 url=$(git config --get remote.origin.url | sed s/git@github.com:/https:\\/\\/github.com\\// | sed s/\\.git$//)
 open $url

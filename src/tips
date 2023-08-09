@@ -1,5 +1,8 @@
 #!/bin/zsh
 
+#
+# Show Tips
+#
 tips=(
   "!!           exec prev command"
   "!foo         exec prev \`foo\` command"

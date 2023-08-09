@@ -1,6 +1,8 @@
 #!/bin/zsh
 
+#
 # Change Terminal Window Title
+#
 if [ "$#" -eq 0 ];then
   echo "usage chtwt 'titlename' "
 else
