@@ -1,0 +1,16 @@
+#!/bin/zsh
+
+#
+# Change Tab Color on iTerm2
+#
+# Usege:
+#   $ tab-color 255 0 0 # change tab color to red
+#   $ tab-clor          # reset tab color
+if [ "$#" -eq 0 ];then
+  # reset color
+  echo -ne "\033]6;1;bg;*;default\a"
+else
+  echo -ne "\033]6;1;bg;red;brightness;$1\a"
+  echo -ne "\033]6;1;bg;green;brightness;$2\a"
+  echo -ne "\033]6;1;bg;blue;brightness;$3\a"
+fi
